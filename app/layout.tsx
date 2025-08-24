@@ -27,7 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="app-container">
+          <main className="app-scroll">{children}</main>
+        </div>
       </body>
     </html>
   );
