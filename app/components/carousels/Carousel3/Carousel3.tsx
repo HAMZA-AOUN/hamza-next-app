@@ -51,7 +51,7 @@ export const Carousel3 = () => {
         pagination={{ clickable: true }}
         coverflowEffect={{
           rotate: 40, // Reduced rotation for better shadow alignment
-          stretch: -50,
+          stretch: -40,
           depth: 150, // Adjusted depth for new slide size
           modifier: 1,
           slideShadows: true,

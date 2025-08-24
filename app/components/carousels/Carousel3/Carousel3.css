@@ -4,24 +4,25 @@
   color: #f9f9f9;
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
-  max-width: 1250px;
+  height: 100dvh;
+  width: 100dvw;
+  max-width: 70dvw;
   padding-left: 24px;
   padding-right: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} 
 
 .carousel-3-page .swiper {
-  height: 900px; /* Increase to accommodate taller slides and pagination */
+  height: 90dvh; /* Increase to accommodate taller slides and pagination */
   /* margin-top: 40px; */
 }
 
 .carousel-3-page .swiper-slide {
-  width: 350px; /* Set desired width */
-  height: 600px; /* Set desired height */
+  width: 30dvw; /* Set desired width */
+  height: 80dvh; /* Set desired height */
+  aspect-ratio: 9 / 16;
   display: flex;
   flex-direction: column;
   justify-content: end;
