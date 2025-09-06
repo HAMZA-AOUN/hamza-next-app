@@ -154,8 +154,8 @@ export const Carousel3 = () => {
   );
 
   // Adjustable parameters
-  const baseSlideWidth = 400; // Adjust this to change slide width (in pixels)
-  const baseSlideHeight = 800; // Slide height
+  const baseSlideWidth = 360; // Adjust this to change slide width (in pixels)
+  const baseSlideHeight = 600; // Slide height
   const frameHeight = 850; // Increased to show shadows/reflection
 
   useEffect(() => {
