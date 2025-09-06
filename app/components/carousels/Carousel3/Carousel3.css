@@ -1,110 +1,126 @@
-.page.carousel-3-page {
+/* Carousel3.css */
+/* .page.carousel-3-page {
   background: linear-gradient(45deg, #8647b3, #40429c);
-  font-size: 14px;
-  color: #f9f9f9;
-  margin: 0;
-  padding: 0;
   height: 100dvh;
   width: 100dvw;
-  max-width: 70dvw;
-  padding-left: 24px;
-  padding-right: 24px;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-} 
-
-.carousel-3-page .swiper {
-  height: 90dvh; /* Increase to accommodate taller slides and pagination */
-  /* margin-top: 40px; */
+  overflow: hidden;
 }
 
-.carousel-3-page .swiper-slide {
-  width: 30dvw; /* Set desired width */
-  height: 80dvh; /* Set desired height */
-  aspect-ratio: 9 / 16;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
+.story-frame {
+  position: relative;
+  width: 400px;
+  height: 800px;
   border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.story-frame .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.story-frame .swiper-slide {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
   filter: grayscale(0.4) saturate(2) sepia(0.2);
-  -webkit-box-reflect: below 24px
-    linear-gradient(transparent, transparent, #0006);
+  -webkit-box-reflect: below 24px linear-gradient(transparent, transparent, #0006);
 }
 
-.carousel-3-page .swiper-slide-shadow-coverflow {
-  border-radius: 20px; /* Ensure shadow matches slide border-radius */
+.story-frame .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 1));
+  border-radius: inherit;
+  z-index: 1;
 }
 
-/* Rest of your existing styles remain unchanged */
-.carousel-3-page h2 {
-  font-weight: 500;
-  margin: 0 0 16px;
-}
-
-.carousel-3-page p {
-  opacity: 0.7;
-  font-size: 18px;
-  margin: 0 0 20px;
-}
-
-.carousel-3-page a {
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-weight: 500;
-  background: transparent;
-  border-radius: 3.125rem;
-  border: 2px solid #ffffff;
-  margin: 0 auto;
-  padding: 6px 26px;
-  font-size: 0.9rem;
-  transition: 0.3s ease-in-out;
-}
-
-.carousel-3-page .swiper-pagination-bullet,
-.carousel-3-page .swiper-pagination-bullet-active {
-  background: #fff;
-}
-
-.carousel-3-page .swiper-pagination {
+.story-frame .swiper-pagination {
   bottom: 34px !important;
   transform: scale(1.3);
 }
 
-.carousel-3-page .swiper-slide::after {
+.story-frame .swiper-pagination-bullet {
+  background: #fff;
+} */
+
+.page.carousel-3-page {
+  background: linear-gradient(45deg, #8647b3, #40429c);
+  height: 100dvh;
+  width: 100dvw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-3-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.story-frame {
+  position: relative;
+  width: 1200px; /* Default for baseSlideWidth=400px; overridden by inline style */
+  height: 850px; /* Increased to show shadows/reflection */
+  border-radius: 20px;
+  overflow: hidden;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
+}
+
+.story-frame .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.story-frame .swiper-slide {
+  width: 400px; /* Default; overridden by inline style */
+  height: 800px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  filter: grayscale(0.4) saturate(2) sepia(0.2);
+  -webkit-box-reflect: below 1.5dvw linear-gradient(transparent, transparent, #0006);
+}
+
+.story-frame .swiper-slide::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgb(0 0 0 / 0%) 50%, rgb(0 0 0 / 100%));
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 1));
   border-radius: inherit;
-  z-index: -1;
+  z-index: 1;
 }
 
-.carousel-3-page .swiper-slide h2 {
-  color: #fff;
-  font-weight: 400;
-  font-size: 1.4rem;
-  line-height: 1.4;
-  margin-bottom: 0.625rem;
-  text-transform: uppercase;
-  text-align: center;
+.story-frame .swiper-slide-shadow-coverflow {
+  border-radius: 20px;
 }
 
-.carousel-3-page .swiper-slide a:hover {
-  color: #005baa;
+.story-frame .swiper-pagination {
+  bottom: 2.125dvw !important; /* Approx. 34px at 1600px */
+  transform: scale(1.3);
 }
 
-.carousel-3-page .swiper-slide div {
-  transition: 0.5s;
-  opacity: 0;
-  padding-bottom: 140px;
-}
-
-.carousel-3-page .swiper-slide-active div {
-  opacity: 1;
+.story-frame .swiper-pagination-bullet {
+  background: #fff;
 }

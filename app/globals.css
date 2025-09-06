@@ -27,6 +27,10 @@ body {
 .app-container {
   width: 100dvw;
   height: 100dvh;
+  min-width: 100dvw;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  max-height: 100dvh;
   /* padding-left: 1rem;
   padding-right: 1rem; */
   overflow: hidden; /* prevent page scroll */
@@ -35,6 +39,10 @@ body {
 .app-scroll {
   height: 100dvh;
   width: 100dvw;
+  min-width: 100dvw;
+  max-width: 100dvw;
+  min-height: 100dvh;
+  max-height: 100dvh;
   overflow-y: auto;
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
